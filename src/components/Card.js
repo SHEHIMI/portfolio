@@ -19,7 +19,7 @@ import React from "react";
 const Pcard = ({ title, description, imageSrc, link }) => {
   return (
     <VStack spacing={0}>
-      <Card maxW="3xl" height={"35rem"}>
+      <Card maxW="3xl" height={"32rem"}>
         <CardHeader
           style={{
             padding: 0,
@@ -27,13 +27,13 @@ const Pcard = ({ title, description, imageSrc, link }) => {
           }}
         >
           <Image
-            
             src={imageSrc}
             alt="Chakra UI"
             style={{
               borderRadius: "5px",
             }}
-            height={"20rem"}
+            height={{ base: "200px", md: "250px" }} // Adjust height for responsiveness
+            objectFit="contain"
           />
           <Flex spacing="4">
             <Flex flex="1" gap="4" alignItems="center" flexWrap="wrap">
