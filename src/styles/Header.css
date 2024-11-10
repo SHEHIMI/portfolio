@@ -1,0 +1,4 @@
+.nav-link:hover {
+    transition: color 0.3s ease-in-out;
+    color: #bdc3c7;
+}
