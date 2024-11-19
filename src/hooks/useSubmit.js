@@ -8,7 +8,6 @@ const useSubmit = () => {
   const submit = async (data) => {
     setLoading(true);
     try {
-      // Replace these with your actual EmailJS Service ID, Template ID, and User ID
       const SERVICE_ID = "service_y3dux9n";
       const TEMPLATE_ID = "template_tsxv0uh";
       const USER_ID = "ytgZDvQ23cebhSOtP";
@@ -26,7 +25,6 @@ const useSubmit = () => {
         },
         USER_ID
       );
-      console.log(res);
       // Check response status
       if (res.status === 200 && res.text === "OK") {
         setResponse({

@@ -41,7 +41,7 @@ const Pcard = ({ title, description, imageSrc, link }) => {
               borderRadius: "5px",
             }}
             mx="auto"
-            height={{ base: "200px", md: "250px" }} // Adjust height for responsiveness
+            height={{ base: "200px", md: "250px" }}
           />
           <Flex spacing="4">
             <Flex flex="1" gap="4" alignItems="center" flexWrap="wrap">
