@@ -59,7 +59,7 @@ const LandingSection = () => {
         w={{ base: "full", md: "60rem" }} // Full width on mobile, 60rem on medium and larger screens
         p={{ base: 4, md: 32 }} // Smaller padding on mobile, larger padding on medium and larger screens
         alignItems="flex-start"
-        color={"blackAlpha.900"}
+        color={"whiteAlpha.900"}
       >
         <Heading as="h1" id="contactme-section">
           Contact me
@@ -94,7 +94,12 @@ const LandingSection = () => {
                 isInvalid={formik.errors.type && formik.touched.type}
               >
                 <FormLabel htmlFor="type">Type of enquiry</FormLabel>
-                <Select id="type" name="type" {...formik.getFieldProps("type")}>
+                <Select
+                  id="type"
+                  name="type"
+                  {...formik.getFieldProps("type")}
+                  color={"blackAlpha.900"}
+                >
                   <option value="pleaseChoose">
                     Please choose from the following ...
                   </option>
@@ -117,14 +122,13 @@ const LandingSection = () => {
                   height={250}
                   {...formik.getFieldProps("comment")}
                 />
-
                 <FormErrorMessage>{formik.errors.comment}</FormErrorMessage>
               </FormControl>
               <Button
                 disabled={formik.isSubmitting}
                 isLoading={isLoading}
                 type="submit"
-                colorScheme="blackAlpha"
+                colorScheme="whiteAlpha"
                 width="full"
               >
                 Submit

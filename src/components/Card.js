@@ -14,12 +14,21 @@ import {
 } from "@chakra-ui/react";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { color } from "framer-motion";
 import React from "react";
+
+const cardStyle = {
+  background: "rgba(255,255,255,0.5)",
+  WebkitBackdropFilter: "blur(10px)",
+  backdropFilter: "blur(10px)",
+  border: "1px solid rgba(255,255,255,0.25)",
+  color: "white",
+};
 
 const Pcard = ({ title, description, imageSrc, link }) => {
   return (
     <VStack spacing={0}>
-      <Card maxW="3xl" height={"32rem"}>
+      <Card maxW="md" height={"32rem"} style={cardStyle}>
         <CardHeader
           style={{
             padding: 0,
@@ -32,8 +41,8 @@ const Pcard = ({ title, description, imageSrc, link }) => {
             style={{
               borderRadius: "5px",
             }}
+            mx="auto"
             height={{ base: "200px", md: "250px" }} // Adjust height for responsiveness
-            objectFit="contain"
           />
           <Flex spacing="4">
             <Flex flex="1" gap="4" alignItems="center" flexWrap="wrap">
@@ -43,7 +52,7 @@ const Pcard = ({ title, description, imageSrc, link }) => {
             </Flex>
             <IconButton
               variant="ghost"
-              colorScheme="gray"
+              colorScheme="whiteAlpha"
               aria-label="See menu"
             />
           </Flex>
@@ -66,6 +75,7 @@ const Pcard = ({ title, description, imageSrc, link }) => {
             onClick={() => {
               window.open(link, "_blank");
             }}
+            color={"whiteAlpha.900"}
           >
             See more
           </Button>

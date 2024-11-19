@@ -19,6 +19,7 @@ import {
   Text,
 } from "@chakra-ui/react";
 import "../styles/Header.css";
+import cv from "../images/Mohamad Shehimi Resume.pdf";
 
 const socials = [
   {
@@ -73,6 +74,16 @@ const Header = () => {
         block: "start",
       });
     }
+  };
+
+  const downloadPdf = () => {
+    const link = document.createElement("a");
+    link.href = cv;
+    console.log(link);
+    link.download = "Mohamad-Shehimi-CV.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   return (
@@ -143,6 +154,16 @@ const Header = () => {
                 >
                   Contact Me
                 </Button>
+                <Button
+                  fontSize={"sm"}
+                  variant="ghost"
+                  colorScheme="whiteAlpha"
+                  onClick={() => {
+                    downloadPdf();
+                  }}
+                >
+                  CV
+                </Button>
               </HStack>
             </>
           )}
@@ -156,17 +177,19 @@ const Header = () => {
             <DrawerHeader>Menu</DrawerHeader>
             <DrawerBody>
               <VStack spacing={4} align="flex-start">
-                {socials.map((social, index) => (
-                  <a
-                    href={social.url}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="nav-link"
-                    key={index}
-                  >
-                    <FontAwesomeIcon icon={social.icon} size={"lg"} />
-                  </a>
-                ))}
+                <HStack spacing={4} align="flex-start">
+                  {socials.map((social, index) => (
+                    <a
+                      href={social.url}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="nav-link"
+                      key={index}
+                    >
+                      <FontAwesomeIcon icon={social.icon} size={"lg"} />
+                    </a>
+                  ))}
+                </HStack>
                 <Button
                   fontSize={"sm"}
                   variant="ghost"
@@ -188,6 +211,16 @@ const Header = () => {
                   }}
                 >
                   Contact Me
+                </Button>
+                <Button
+                  fontSize={"sm"}
+                  variant="ghost"
+                  colorScheme="whiteAlpha"
+                  onClick={() => {
+                    downloadPdf();
+                  }}
+                >
+                  CV
                 </Button>
               </VStack>
             </DrawerBody>

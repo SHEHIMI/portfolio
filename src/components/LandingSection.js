@@ -25,11 +25,12 @@ const LandingSection = () => {
           fontWeight="bold"
           mb={4}
           textAlign={"center"}
-          color={"blackAlpha.800"}
+          color={"whiteAlpha.900"}
+          zIndex={1}
         >
           {greeting}
         </Heading>
-        <VStack spacing={4} color={"blackAlpha.800"}>
+        <VStack spacing={4} color={"whiteAlpha.900"} zIndex={1}>
           <Heading
             as="h1"
             fontSize={isMobile ? "3xl" : "5xl"}
@@ -38,14 +39,6 @@ const LandingSection = () => {
           >
             {bio1}
           </Heading>
-          {/* <Heading
-            as="h1"
-            fontSize={isMobile ? "3xl" : "5xl"}
-            fontWeight="semibold"
-            textAlign={"center"}
-          >
-            {bio2}
-          </Heading> */}
         </VStack>
       </FullScreenSection>
     </div>
