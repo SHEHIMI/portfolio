@@ -14,7 +14,6 @@ import {
 } from "@chakra-ui/react";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { color } from "framer-motion";
 import React from "react";
 
 const cardStyle = {
